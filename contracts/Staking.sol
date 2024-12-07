@@ -52,7 +52,7 @@ contract Staking is Ownable, AccessControl {
 
     function claim() external {
         require(users[msg.sender].staked == true, "You did not stake");
-        require(users[msg.sender].stakeTime >= block.timestamp + rewardTime, "You can not get reward yet");
+        require(users[msg.sender].stakeTime <= block.timestamp + rewardTime, "You can not get reward yet");
         
         uint256 reward = users[msg.sender].amount * rewardPercent / 100;
 
@@ -63,7 +63,7 @@ contract Staking is Ownable, AccessControl {
 
     function unstake() external {
         require(users[msg.sender].staked == true, "You did not stake");
-        require(users[msg.sender].stakeTime >= block.timestamp + lockTime, "You can not get lp tokens yet");
+        require(users[msg.sender].stakeTime <= block.timestamp + lockTime, "You can not get lp tokens yet");
 
         lpToken.transfer(msg.sender, users[msg.sender].amount);
 

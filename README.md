@@ -1,13 +1,5 @@
-# Sample Hardhat Project
+staking contract address: 0x052C4E69e0A7c2fCe168Ee6BA0B94dcAefdb06B6
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
+UNI-V2 contract address: 0x474D558AB0573032E6CD1C391199eCC58f97f767
 
-Try running some of the following tasks:
-
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.ts
-```
+STT contract address: 0xdF261b337F137646d010ae933Ab729fdfFb9f4e4
